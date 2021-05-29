@@ -1,0 +1,81 @@
+{
+    "author": {
+        "email": "ahmad@null.pk",
+        "name": "Ahmad Shahzad",
+        "url": "https://null.pk/"
+    },
+    "bugs": {
+        "url": "https://github.com/xaexals/caiko/issues/"
+    },
+    "dependencies": {
+        "discord.js": "^12.5.3",
+        "ioredis": "^4.27.3",
+        "mongoose": "^5.12.12",
+        "winston": "^3.3.3"
+    },
+    "description": "A Discord bot that lets you give caiko(s) to others for their help, or just to make their day!",
+    "devDependencies": {
+        "@types/mongoose": "^5.10.5",
+        "@types/node": "^15.6.1",
+        "@typescript-eslint/eslint-plugin": "^4.25.0",
+        "@typescript-eslint/parser": "^4.25.0",
+        "eslint": "^7.27.0",
+        "nodemon": "^2.0.7",
+        "prettier": "^2.3.0",
+        "typescript": "^4.3.2"
+    },
+    "eslintConfig": {
+        "extends": [
+            "eslint:recommended",
+            "plugin:@typescript-eslint/eslint-recommended",
+            "plugin:@typescript-eslint/recommended"
+        ],
+        "parser": "@typescript-eslint/parser",
+        "plugins": [
+            "@typescript-eslint"
+        ],
+        "root": true,
+        "rules": {}
+    },
+    "homepage": "https://caiko.null.pk/",
+    "license": "MIT",
+    "main": "dist/index.js",
+    "name": "caiko",
+    "nodemonConfig": {
+        "exec": "npm run commit && npm run build && npm run start",
+        "ext": ".ts,.json",
+        "ignore": [
+            "dist",
+            "node_modules"
+        ],
+        "watch": [
+            "src"
+        ]
+    },
+    "prettier": {
+        "arrowParens": "always",
+        "bracketSpacing": true,
+        "endOfLine": "lf",
+        "printWidth": 75,
+        "semi": true,
+        "singleQuote": true,
+        "tabWidth": 4,
+        "trailingComma": "all",
+        "useTabs": false
+    },
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/xaexals/caiko/"
+    },
+    "scripts": {
+        "build": "tsc",
+        "commit": "git add -A;git commit",
+        "format": "npm run format:prettier && npm run format:eslint",
+        "format:eslint": "eslint . --ext .ts",
+        "format:prettier": "prettier --write .",
+        "start": "node .",
+        "start:dev": "nodemon"
+    },
+    "version": "0.0.0"
+}
