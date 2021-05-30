@@ -42,7 +42,7 @@
     "main": "dist/index.js",
     "name": "caiko",
     "nodemonConfig": {
-        "exec": "npm run commit && npm run build && npm run start",
+        "exec": "npm run commit ; npm run build && npm run start",
         "ext": ".ts,.json",
         "ignore": [
             "dist",
