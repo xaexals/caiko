@@ -70,7 +70,7 @@
     },
     "scripts": {
         "build": "tsc",
-        "commit": "git add -A;git commit",
+        "commit": "git add -A;git commit;git push",
         "format": "npm run format:prettier && npm run format:eslint",
         "format:eslint": "eslint . --ext .ts",
         "format:prettier": "prettier --write .",
